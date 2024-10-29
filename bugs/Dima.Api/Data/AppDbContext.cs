@@ -32,7 +32,7 @@ public class AppDbContext(DbContextOptions<AppDbContext> options)
     {
         modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
 
-        modelBuilder.Entity<IncomesAndExpenses>()
+        modelBuilder.Entity<IncomesAndExpenses>()       
             .HasNoKey()
             .ToView("vwGetIncomesAndExpenses");
 
@@ -43,5 +43,8 @@ public class AppDbContext(DbContextOptions<AppDbContext> options)
         modelBuilder.Entity<ExpensesByCategory>()
             .HasNoKey()
             .ToView("vwGetExpensesByCategory");
+
+       
+
     }
 }

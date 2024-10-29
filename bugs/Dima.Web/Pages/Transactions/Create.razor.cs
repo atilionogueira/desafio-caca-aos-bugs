@@ -72,7 +72,7 @@ public partial class CreateTransactionPage : ComponentBase
             var result = await TransactionHandler.CreateAsync(InputModel);
             if (result.IsSuccess)
             {
-                Snackbar.Add(result.Message, Severity.Success);
+                Snackbar.Add(result.Message, Severity.Success);              
                 NavigationManager.NavigateTo("/lancamentos/historico");
             }
             else

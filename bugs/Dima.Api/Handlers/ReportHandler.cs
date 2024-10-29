@@ -48,7 +48,7 @@ public class ReportHandler(AppDbContext context) : IReportHandler
 
             return new Response<List<IncomesByCategory>?>(data);
         }
-        catch
+        catch(Exception)
         {
             return new Response<List<IncomesByCategory>?>(null, 500,
                 "Não foi possível obter as entradas por categoria");
