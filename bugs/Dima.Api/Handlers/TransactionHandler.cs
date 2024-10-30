@@ -21,7 +21,7 @@ public class TransactionHandler(AppDbContext context) : ITransactionHandler
         {
             var transaction = new Transaction
             {
-                UserId = "test@balta.io",
+                UserId = request.UserId,   // bug 5
                 CategoryId = request.CategoryId,
                 CreatedAt = DateTime.Now,
                 Amount = request.Amount,
@@ -45,7 +45,7 @@ public class TransactionHandler(AppDbContext context) : ITransactionHandler
     {
         try
         {
-            var transaction = await context
+            var transaction = await context    // bug 6
                 .Transactions
                 .FirstOrDefaultAsync(x => x.Id == request.Id && x.UserId == request.UserId);
 

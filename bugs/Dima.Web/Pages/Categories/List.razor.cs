@@ -11,7 +11,7 @@ public partial class ListCategoriesPage : ComponentBase
     #region Properties
 
     public bool IsBusy { get; set; } = false;
-    public List<Category> Categories { get; set; } = new List<Category>();
+    public List<Category> Categories { get; set; } = new List<Category>(); // Bug 03
     public string SearchTerm { get; set; } = string.Empty;
 
     #endregion
