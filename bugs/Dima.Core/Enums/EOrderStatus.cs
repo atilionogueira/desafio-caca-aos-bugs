@@ -2,7 +2,7 @@
 
 public enum EOrderStatus
 {
-    // enumero de ordens 
+  
     WaitingPayment = 1,
     Paid = 2,
     Canceled = 3,
